@@ -10,23 +10,40 @@
 <body>
   <header>
     <nav class="navbar">
-      <a href="index.html" class="navbar-brand">
-        <img class="logo" src="https://www.svgrepo.com/show/501816/play-game.svg">
-        Games Database
-      </a>
+        <div class="navbar-brand" role="navigation">
+            <a href="index.html" class="navbar-item" >
+                <img class="image" src="https://bulma.io/assets/brand/Bulma%20Icon.svg">
+            </a>
+        </div>
 
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a href="" class="navbar-item">Home</a>
+            </div>
+
+            <div class="navbar-end">
+                <input class="input" type="text" placeholder="Search for a game" />
+                <input class="button" type="submit" value="Search" />
+            </div>
+        </div>
 
     </nav>
   </header>
 
   <main>
-      <div id="gameList" class="gameList">
-
+      <div id="gameList" class="grid is-col-min-12">
+        <!-- Inserir card de cada jogo via javascript aqui -->
       </div>
   </main>
 
-  <footer>
-    <p>Desenvolvido por Juno, Guilherme e Nicolas.</p>
+  <footer class="footer">
+      <div class="content has-text-centered">
+          <p>
+              <strong>Developed by Juno, Guilherme and Nicolas.</strong>
+              The source code is licensed
+              <a href="https://opensource.org/license/mit">MIT</a>.
+          </p>
+      </div>
   </footer>
 </body>
   <script src="scripts/production.env.js"></script>

@@ -1,9 +1,14 @@
 // Import the Google Font
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 
-.logo {
-  width: 5rem;
-  height: 5rem;
+
+div{
+
+  .gameList {
+    margin: 1rem;
+    justify-content: flex-start;
+  }
 }
+
 
 
