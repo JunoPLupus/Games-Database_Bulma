@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <nav class="navbar">
+    <nav class="navbar is-fixed-top">
         <div class="navbar-brand" role="navigation">
             <a href="index.html" class="navbar-item" >
                 <img class="image" src="https://bulma.io/assets/brand/Bulma%20Icon.svg">
@@ -37,13 +37,43 @@
   </header>
 
   <main>
-      <section class="hero">
-          <div class="hero-body">
-              <div id="gameList" class="grid is-col-min-12">
-                  <!-- Inserir card de cada jogo via javascript aqui -->
+      <div class="container">
+          <br>
+          <section class="hero">
+              <div class="hero-body">
+                  <div id="gameList" class="grid is-col-min-12">
+                      <!-- Inserir card de cada jogo via javascript aqui -->
+                  </div>
               </div>
-          </div>
-      </section>
+          </section>
+
+          <section class="section">
+              <nav class="pagination" role="navigation" aria-label="pagination">
+                  <a class="pagination-previous is-disabled" title="This is the first page"
+                  >Previous</a
+                  >
+                  <a href="#" class="pagination-next">Next page</a>
+                  <ul class="pagination-list">
+                      <li>
+                          <a
+                                  class="pagination-link is-current"
+                                  aria-label="Page 1"
+                                  aria-current="page"
+                          >1</a
+                          >
+                      </li>
+                      <li>
+                          <a href="#" class="pagination-link" aria-label="Goto page 2">2</a>
+                      </li>
+                      <li>
+                          <a href="#" class="pagination-link" aria-label="Goto page 3">3</a>
+                      </li>
+                  </ul>
+              </nav>
+
+          </section>
+      </div>
+
       
   </main>
 
