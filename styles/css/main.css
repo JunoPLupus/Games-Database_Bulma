@@ -22481,4 +22481,8 @@ has-background-danger.is-hoverable:active {
   pointer-events: all !important;
 }
 
+div .card-title {
+  height: 3.5rem;
+}
+
 /*# sourceMappingURL=main.css.map */
