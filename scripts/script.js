@@ -17,6 +17,7 @@ const loadGames = (url) => {
             games.forEach(game => {
                 const gameItemEl = `
                     <div class="card">
+                    
                           <div class="card-image">
                             <figure class="image is-4by3">
                               <img
@@ -24,21 +25,24 @@ const loadGames = (url) => {
                                 alt="${game.name} image"
                               />
                             </figure>
-                          </div>
+                          </div> <!-- Fim "card-image" -->
+                          
                           <div class="card-content">
-            
-                              <div class="media-content">
-                                <p class="title is-4">${game.name}</p>
-                                <p class="subtitle is-6">${getPlatformStr(game.parent_platforms)}</p>
-                              </div>
-                            </div>
-                        
-                            <div class="content">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                              iaculis mauris. 
-                            </div>
-                          </div>
-                        </div>
+                
+                                    <div class="media-content">
+                                        <p class="title is-4">${game.name}</p>
+                                        <p class="subtitle is-6">${getPlatformStr(game.parent_platforms)}</p>
+                                      </div> <!-- Fim "media-content" -->
+                                    <br>
+                                    <div class="content">
+                                      <span class="icon-text">
+                                          <span class="icon has-text-warning"> <i class="fa-slab fa-regular fa-star"></i> </span>
+                                          <span>${game.rating}</span>
+                                        </span>
+                                    </div> <!-- Fim "content" -->
+                            
+                          </div> <!-- Fim "card-content" -->
+                        </div> <!-- Fim "card" -->
                     `
                 gameList.insertAdjacentHTML("beforeend", gameItemEl);
             });

@@ -25,3 +25,6 @@ $beige-lighter: #eff0eb;
 @forward "bulma/sass/elements/icon";
 @forward "bulma/sass/elements/content";
 @forward "bulma/sass/layout/footer";
+
+// Import the Google Font
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
