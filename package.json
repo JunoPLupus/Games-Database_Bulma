@@ -1,9 +1,10 @@
 {
   "dependencies": {
     "bulma": "^1.0.4",
+    "@fortawesome/fontawesome-free": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "sass": "^1.90.0"
   },
-
   "scripts": {
     "build-bulma": "sass --load-path=node_modules styles/sass/main.scss styles/css/main.css",
     "start": "npm run build-bulma -- --watch"
