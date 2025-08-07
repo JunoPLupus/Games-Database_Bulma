@@ -1,9 +1,9 @@
 // Set your brand colors
-$purple: #8a4d76;
 $pink: #fa7c91;
 $brown: #757763;
 $beige-light: #d0d1cd;
 $beige-lighter: #eff0eb;
+$blue: #00d1b2;
 
 
 // Path to Bulma's sass folder
@@ -11,7 +11,7 @@ $beige-lighter: #eff0eb;
   $family-primary: '"Nunito", sans-serif',
   $grey-dark: $brown,
   $grey-light: $beige-light,
-  $primary: $purple,
+  $primary: $blue,
   $link: $pink,
   $control-border-width: 2px,
   $input-shadow: none
