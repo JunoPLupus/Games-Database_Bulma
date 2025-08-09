@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -56,7 +56,7 @@ html, body {
   --bulma-scheme-invert-ter-l: 14%;
   --bulma-scheme-invert-bis-l: 7%;
   --bulma-scheme-invert-l: 4%;
-  --bulma-family-primary: "Nunito", sans-serif;
+  --bulma-family-primary: "Work Sans", Helvetica, sans-serif;
   --bulma-family-secondary: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
   --bulma-family-code: Inconsolata, Hack, SF Mono, Roboto Mono, Source Code Pro, Ubuntu Mono, monospace;
   --bulma-size-small: 0.75rem;
@@ -957,7 +957,7 @@ html, body {
     --bulma-scheme-invert-ter-l: 14%;
     --bulma-scheme-invert-bis-l: 7%;
     --bulma-scheme-invert-l: 4%;
-    --bulma-family-primary: "Nunito", sans-serif;
+    --bulma-family-primary: "Work Sans", Helvetica, sans-serif;
     --bulma-family-secondary: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
     --bulma-family-code: Inconsolata, Hack, SF Mono, Roboto Mono, Source Code Pro, Ubuntu Mono, monospace;
     --bulma-size-small: 0.75rem;
@@ -1875,7 +1875,7 @@ html, body {
   --bulma-scheme-invert-ter-l: 14%;
   --bulma-scheme-invert-bis-l: 7%;
   --bulma-scheme-invert-l: 4%;
-  --bulma-family-primary: "Nunito", sans-serif;
+  --bulma-family-primary: "Work Sans", Helvetica, sans-serif;
   --bulma-family-secondary: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
   --bulma-family-code: Inconsolata, Hack, SF Mono, Roboto Mono, Source Code Pro, Ubuntu Mono, monospace;
   --bulma-size-small: 0.75rem;
@@ -21966,7 +21966,7 @@ has-background-danger.is-hoverable:active {
 }
 
 .is-family-primary {
-  font-family: '"Nunito", sans-serif' !important;
+  font-family: '"Work Sans", Helvetica, sans-serif' !important;
 }
 
 .is-family-secondary {
@@ -22494,6 +22494,30 @@ div .card:hover {
   cursor: pointer;
   transform: scale(1.03);
   box-shadow: var(--bulma-card-shadow), 0 0 0 3px #00d1b2; /* 3px “borda” externa  #00d1b2*/
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.background-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.1));
+  z-index: 1;
 }
 
 /*# sourceMappingURL=main.css.map */

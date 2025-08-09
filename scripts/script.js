@@ -1,5 +1,6 @@
 //#region Variables
 //const url = `https://api.rawg.io/api/games/clair-obscur-expedition-33?key=${APIKEY}`
+//https://api.rawg.io/api/games/clair-obscur-expedition-33/screenshots?key=43ed13b250354e9bb41110a01c64db7f
 const url = `https://api.rawg.io/api/games?key=${APIKEY}&dates=2025-01-01,2025-08-01&ordering=-added`
 const gameList = document.getElementById("gameList");
 
@@ -16,7 +17,7 @@ const loadGames = (url) => {
 
             games.forEach(game => {
                 const gameItemEl = `
-                    <div class="card">
+                    <div class="card" onclick="window.location.href = 'info.html';">
 
                               <div class="card-image">
                                 <figure class="image is-5by3">
@@ -41,7 +42,7 @@ const loadGames = (url) => {
                                         </div> <!-- Fim "content" -->
                               </div> <!-- Fim "card-content" -->
 
-                            </div> <!-- Fim "card" -->
+                    </div> <!-- Fim "card" -->
                     `
                 gameList.insertAdjacentHTML("beforeend", gameItemEl);
             });

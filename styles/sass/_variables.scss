@@ -8,7 +8,7 @@ $blue: #00d1b2;
 
 // Path to Bulma's sass folder
 @use "bulma/sass" with (
-  $family-primary: '"Nunito", sans-serif',
+  $family-primary: '"Work Sans", Helvetica, sans-serif',
   $grey-dark: $brown,
   $grey-light: $beige-light,
   $primary: $blue,
@@ -27,4 +27,4 @@ $blue: #00d1b2;
 @forward "bulma/sass/layout/footer";
 
 // Import the Google Font
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
