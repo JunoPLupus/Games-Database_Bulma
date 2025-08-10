@@ -3,11 +3,22 @@
 * {
   box-sizing: border-box;
 }
-
+body {
+  background-color: var(--bg-color);
+  
+  color: var(--text-color);
+  font-size: 16px; /* padrão */
+}
 html, body {
   margin: 0;
   padding: 0;
 }
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+
 
 /* Bulma Utilities */
 :root {

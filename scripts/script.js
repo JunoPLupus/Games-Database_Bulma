@@ -60,3 +60,7 @@ const getPlatformStr = (platforms) => {
     }
     return platformStr;
 }
+
+document.getElementById('colorPicker').addEventListener('input', function (e) {
+    document.documentElement.style.setProperty('--primary-color', e.target.value);
+});

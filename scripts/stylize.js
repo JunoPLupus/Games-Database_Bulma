@@ -1,80 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
-  function applyColors(bg, text, paletteName) {
-    // atualizar variáveis e inline (com prioridade)
-    document.documentElement.style.setProperty('--site-bg', bg);
-    document.documentElement.style.setProperty('--site-text', text);
-    document.body.style.setProperty('background-color', bg, 'important');
-    document.body.style.setProperty('color', text, 'important');
+  function applyColors(bg, text) {
+    // Atualiza as variáveis CSS no :root
+    document.documentElement.style.setProperty('--bg-color', bg);
+    document.documentElement.style.setProperty('--text-color', text);
 
-    // salvar
+    // Também aplica direto no body para garantir a mudança imediata
+    document.body.style.backgroundColor = bg;
+    document.body.style.color = text;
+
+    // Salva no localStorage
     localStorage.setItem("site-bg", bg);
     localStorage.setItem("site-text", text);
-    if (paletteName) localStorage.setItem("site-palette-name", paletteName);
   }
 
   function applyFontSize(size) {
-    document.documentElement.style.setProperty('font-size', size);
+    document.body.style.fontSize = size;
     localStorage.setItem("site-font", size);
   }
 
-  // elementos
-  const customBgInput = document.getElementById("custom-bg");
-  const customTextInput = document.getElementById("custom-text");
+  // Carrega valores salvos ao entrar na página
   const savedBg = localStorage.getItem("site-bg");
   const savedText = localStorage.getItem("site-text");
-  const savedPalette = localStorage.getItem("site-palette-name");
   const savedFont = localStorage.getItem("site-font");
 
-  if (savedBg && customBgInput) customBgInput.value = savedBg;
-  if (savedText && customTextInput) customTextInput.value = savedText;
+  if (savedBg && savedText) applyColors(savedBg, savedText);
+  if (savedFont) applyFontSize(savedFont);
 
-  // marcar botão da paleta salvo
-  if (savedPalette) {
-    document.querySelectorAll('#color-palettes .button').forEach(b => {
-      b.classList.toggle('is-primary', b.dataset.name === savedPalette);
-    });
-  }
-
-  // marcar botão do tamanho de fonte salvo
-  if (savedFont) {
-    document.querySelectorAll('#font-buttons .button, [data-font]').forEach(b => {
-      b.classList.toggle('is-primary', b.dataset.font === savedFont);
-    });
-  }
-
-  // handlers paletas
+  // Eventos para paletas pré-definidas
   document.querySelectorAll("#color-palettes button").forEach(btn => {
     btn.addEventListener("click", () => {
       const [bg, text] = btn.dataset.color.split(",");
-      const name = btn.dataset.name || btn.textContent.trim().toLowerCase();
-      applyColors(bg.trim(), text.trim(), name);
-
-      // UI visual
-      document.querySelectorAll('#color-palettes .button').forEach(b => b.classList.remove('is-primary'));
-      btn.classList.add('is-primary');
-
-      if (customBgInput) customBgInput.value = bg.trim();
-      if (customTextInput) customTextInput.value = text.trim();
+      applyColors(bg, text);
     });
   });
 
-  // custom
-  const applyCustomBtn = document.getElementById("apply-custom");
-  if (applyCustomBtn) {
-    applyCustomBtn.addEventListener("click", () => {
-      const bg = (customBgInput && customBgInput.value) || "#ffffff";
-      const text = (customTextInput && customTextInput.value) || "#000000";
-      applyColors(bg, text, "custom");
-      document.querySelectorAll('#color-palettes .button').forEach(b => b.classList.remove('is-primary'));
-    });
-  }
+  // Evento paleta customizada
+  document.getElementById("apply-custom").addEventListener("click", () => {
+    const bg = document.getElementById("custom-bg").value;
+    const text = document.getElementById("custom-text").value;
+    applyColors(bg, text);
+  });
 
-  // fontes
+  // Evento para tamanho da fonte
   document.querySelectorAll("[data-font]").forEach(btn => {
     btn.addEventListener("click", () => {
       applyFontSize(btn.dataset.font);
-      document.querySelectorAll('[data-font]').forEach(b => b.classList.remove('is-primary'));
-      btn.classList.add('is-primary');
     });
   });
+
+  // Exibir aviso LGPD, se existir
+  const banner = document.getElementById("cookie-banner");
+  if (banner && !localStorage.getItem("cookiesAccepted")) {
+    banner.style.display = "block";
+    document.getElementById("accept-cookies").addEventListener("click", () => {
+      localStorage.setItem("cookiesAccepted", "true");
+      banner.style.display = "none";
+    });
+  }
 });
