@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/css/main.css" />
+  <title>Games Database</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar is-fixed-top">
+      <div class="navbar-brand" role="navigation">
+        <a href="home.html" class="navbar-item">
+          <img class="image" src="https://bulma.io/assets/brand/Bulma%20Icon.svg" alt="Bulma Framework icon">
+        </a>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a href="home.html" class="navbar-item">Home</a>
+          <a href="stylize.html" class="navbar-item">Stylize</a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <input class="input" type="text" placeholder="Search for a game" />
+          </div>
+
+          <div class="navbar-item">
+            <input class="button navbar-item" type="submit" value="Search" />
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="game-details" class="hero is-fullheight is-dark has-background">
+    <!-- Inserir aqui detalhes do jogo via JS -->
+  </main>
+
+  <footer id="footer" class="footer"><!-- Footer inserido via JS --></footer>
+
+  <script src="https://kit.fontawesome.com/050da3baad.js" crossorigin="anonymous"></script>
+  <script src="scripts/production.env.js"></script>
+  <script src="scripts/functions.js"></script>
+
+  <script src="scripts/applySettings.js"></script>
+
+  <script src="scripts/footer.js"></script>
+  <script src="scripts/info.js"></script>
+</body>
+</html>

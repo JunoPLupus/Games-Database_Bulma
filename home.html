@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/css/main.css" />
+  <title>Games Database</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar is-fixed-top">
+      <div class="navbar-brand" role="navigation">
+        <a href="home.html" class="navbar-item">
+          <img class="image" src="https://bulma.io/assets/brand/Bulma%20Icon.svg" alt="Bulma Framework icon">
+        </a>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a href="home.html" class="navbar-item">Home</a>
+          <a href="stylize.html" class="navbar-item">Stylize</a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <input class="input" type="text" placeholder="Search for a game" />
+          </div>
+
+          <div class="navbar-item">
+            <input class="button navbar-item" type="submit" value="Search" />
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <br>
+      <section class="hero">
+        <div class="hero-body">
+          <div id="gameList" class="grid is-col-min-12">
+            <!-- Inserir card de cada jogo via javascript aqui -->
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <nav class="pagination" role="navigation" aria-label="pagination">
+          <a class="pagination-previous is-disabled" title="This is the first page">Previous</a>
+          <a href="#" class="pagination-next">Next page</a>
+          <ul class="pagination-list">
+            <li><a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a></li>
+            <li><a href="#" class="pagination-link" aria-label="Goto page 2">2</a></li>
+            <li><a href="#" class="pagination-link" aria-label="Goto page 3">3</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+  </main>
+
+  <footer id="footer" class="footer"><!-- Footer inserido via JS --></footer>
+
+  <!-- SCRIPTS: ordem correta. applySettings.js deve ser carregado antes dos scripts da página -->
+  <script src="https://kit.fontawesome.com/050da3baad.js" crossorigin="anonymous"></script>
+  <script src="scripts/production.env.js"></script>
+  <script src="scripts/functions.js"></script>
+
+  <!-- aplica configurações e banner LGPD -->
+  <script src="scripts/applySettings.js"></script>
+
+  <!-- scripts da página (footer, home) -->
+  <script src="scripts/footer.js"></script>
+  <script src="scripts/home.js"></script>
+</body>
+</html>

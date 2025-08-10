@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/css/main.css" />
+  <title>Stylize</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar is-fixed-top">
+      <div class="navbar-brand" role="navigation">
+        <a href="home.html" class="navbar-item">
+          <img class="image" src="https://bulma.io/assets/brand/Bulma%20Icon.svg" alt="Bulma Framework icon">
+        </a>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a href="home.html" class="navbar-item">Home</a>
+          <a href="stylize.html" class="navbar-item">Stylize</a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <input class="input" type="text" placeholder="Search for a game" />
+          </div>
+
+          <div class="navbar-item">
+            <input class="button navbar-item" type="submit" value="Search" />
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="title">Configurações do Site</h1>
+
+      <!-- Escolha da Paleta -->
+      <div class="box">
+        <h2 class="subtitle">Escolher Paleta de Cores</h2>
+       <div id="color-palettes" class="buttons">
+  <button class="button" data-name="classica" data-color="#ffffff,#000000">Clássica</button>
+  <button class="button" data-name="azul" data-color="#0d6efd,#ffffff">Azul</button>
+  <button class="button" data-name="vermelho" data-color="#dc3545,#ffffff">Vermelho</button>
+  <button class="button" data-name="verde" data-color="#198754,#ffffff">Verde</button>
+  <button class="button" data-name="amarela" data-color="#ffc107,#000000">Amarela</button>
+  <button class="button" data-name="dark" data-color="#212529,#ffffff">Dark</button>
+</div>
+
+
+        <div style="margin-top: 0.75rem;">
+          <label class="label">Paleta Personalizada:</label>
+          <input type="color" id="custom-bg" value="#ffffff">
+          <input type="color" id="custom-text" value="#000000">
+          <button class="button is-info" id="apply-custom">Aplicar</button>
+        </div>
+      </div>
+
+      <!-- Escolha do tamanho da fonte -->
+      <div class="box">
+        <h2 class="subtitle">Tamanho da Fonte</h2>
+        <div id="font-buttons" class="buttons">
+          <button class="button" data-font="14px">Pequeno</button>
+          <button class="button" data-font="16px">Médio</button>
+          <button class="button" data-font="20px">Grande</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer" class="footer"><!-- Footer inserido via JS --></footer>
+
+  <script src="https://kit.fontawesome.com/050da3baad.js" crossorigin="anonymous"></script>
+  <script src="scripts/production.env.js"></script>
+  <script src="scripts/functions.js"></script>
+
+  <script src="scripts/applySettings.js"></script>
+  <script src="scripts/footer.js"></script>
+  <!-- stylize deve vir por último (usa DOM já carregado e settings aplicados) -->
+  <script src="scripts/stylize.js"></script>
+</body>
+</html>
