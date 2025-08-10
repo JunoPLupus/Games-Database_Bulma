@@ -3,22 +3,11 @@
 * {
   box-sizing: border-box;
 }
-body {
-  background-color: var(--bg-color);
-  
-  color: var(--text-color);
-  font-size: 16px; /* padrão */
-}
+
 html, body {
   margin: 0;
   padding: 0;
 }
-:root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-}
-
-
 
 /* Bulma Utilities */
 :root {
@@ -22491,34 +22480,5 @@ has-background-danger.is-hoverable:active {
   cursor: pointer !important;
   pointer-events: all !important;
 }
-
-/* ===== Theme variables (site-wide) ===== */
-:root{
-  --site-bg: #ffffff;
-  --site-text: #000000;
-  --site-font-size: 16px;
-}
-
-/* Aplica variáveis globalmente (usa !important para sobrepor framework) */
-html, body {
-  background-color: var(--site-bg) !important;
-  color: var(--site-text) !important;
-  font-size: var(--site-font-size) !important;
-  transition: background-color .25s ease, color .25s ease, font-size .2s ease;
-}
-
-/* Forçar componentes principais do Bulma a herdar as variáveis */
-.hero, .section, .box, .navbar, .footer, .container, .card, .card-content {
-  background-color: var(--site-bg) !important;
-  color: var(--site-text) !important;
-}
-
-/* Links e itens de navegação (mantém acessibilidade) */
-a, .navbar-item, .button, .pagination-link {
-  color: var(--site-text) !important;
-}
-
-/* Para botões com background (se quiser que botões mantenham visual diferente, remova esta regra) */
-/* .button { background-color: transparent !important; } */
 
 /*# sourceMappingURL=main.css.map */
