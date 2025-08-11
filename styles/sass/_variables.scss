@@ -1,9 +1,4 @@
 // Variáveis Sass para Bulma
-$primary-color: #8a4d76;
-$link-color: #fa7c91;
-$grey-dark-color: #757763;
-$grey-light-color: #d0d1cd;
-$beige-lighter-color: #eff0eb;
 $pink: #fa7c91;
 $brown: #757763;
 $beige-light: #d0d1cd;
@@ -32,12 +27,6 @@ $blue: #00d1b2;
 
 // Variáveis CSS custom properties para uso no CSS normal
 :root {
-  --primary-color: $primary;
-  --link-color: $link;
-  --grey-dark-color: $grey-dark;
-  --grey-light-color: $grey-light;
-  --beige-lighter-color: $beige-lighter;
-
   --bg-color: #757763;
   --text-color: #00d1b2;
   --font-size: 16px;
