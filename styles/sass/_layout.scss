@@ -17,7 +17,7 @@ div{
     transform: scale(1.03);
     box-shadow:
             var(--bulma-card-shadow),
-            0 0 0 3px $blue; /* 3px “borda” externa  #00d1b2*/
+            0 0 0 3px $primary-color; /* 3px “borda” externa  #00d1b2*/
   }
 }
 
