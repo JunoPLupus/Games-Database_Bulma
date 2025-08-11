@@ -4,17 +4,21 @@ $link-color: #fa7c91;
 $grey-dark-color: #757763;
 $grey-light-color: #d0d1cd;
 $beige-lighter-color: #eff0eb;
+$pink: #fa7c91;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+$blue: #00d1b2;
 
-
-// Importando Bulma com variáveis Sass
+// Path to Bulma's sass folder
 @use "bulma/sass" with (
   $family-primary: '"Work Sans", Helvetica, sans-serif',
-  $grey-dark: $grey-dark-color,
-  $grey-light: $grey-light-color,
-  $primary: $primary-color,
-  $link: $link-color,
+  $grey-dark: $brown,
+  $grey-light: $beige-light,
+  $primary: $blue,
+  $link: $pink,
   $control-border-width: 2px,
-  $input-shadow: none
+  $input-shadow: none
 );
 
 // Import the components you need
@@ -28,14 +32,14 @@ $beige-lighter-color: #eff0eb;
 
 // Variáveis CSS custom properties para uso no CSS normal
 :root {
-  --primary-color: #8a4d76;
-  --link-color: #fa7c91;
-  --grey-dark-color: #757763;
-  --grey-light-color: #d0d1cd;
-  --beige-lighter-color: #eff0eb;
+  --primary-color: $primary;
+  --link-color: $link;
+  --grey-dark-color: $grey-dark;
+  --grey-light-color: $grey-light;
+  --beige-lighter-color: $beige-lighter;
 
-  --bg-color: #ffffff;
-  --text-color: #000000;
+  --bg-color: #757763;
+  --text-color: #00d1b2;
   --font-size: 16px;
 }
 
