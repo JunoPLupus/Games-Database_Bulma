@@ -27,8 +27,8 @@ $blue: #00d1b2;
 
 // Variáveis CSS custom properties para uso no CSS normal
 :root {
-  --bg-color: #757763;
-  --text-color: #00d1b2;
+  --bg-color: --bulma-footer-background-color;
+  --text-color: --bulma-body-color;
   --font-size: 16px;
 }
 
