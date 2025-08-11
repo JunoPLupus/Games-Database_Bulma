@@ -1,3 +1,10 @@
+// Aplicando CSS custom properties no body para o JS alterar
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--font-size);
+}
+
 div{
   .grid {
     gap: 2rem;   /* espaçamento horizontal e vertical */

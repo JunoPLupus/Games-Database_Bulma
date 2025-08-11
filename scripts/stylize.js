@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
           });
     });
 
-    // Exibir aviso LGPD, se existir
+    // Exibir aviso Cookies
     const banner = document.getElementById("cookie-banner");
     if (banner && !localStorage.getItem("cookiesAccepted")) {
           banner.style.display = "block";
